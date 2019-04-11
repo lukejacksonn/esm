@@ -1,0 +1,47 @@
+dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: rgba(44, 45, 51, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
+
+dialog h1 {
+  font-size: 20vmin;
+}
+
+dialog h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 3vmin !important;
+  padding: 0 2rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+dialog p {
+  max-width: 45ex;
+  text-align: center;
+  line-height: 150%;
+  font-size: 3vmin;
+}
+
+dialog * + * {
+  margin-top: 1rem;
+}
+
+dialog button {
+  color: hotpink;
+  border: 1px solid hotpink;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  padding: 1rem;
+}

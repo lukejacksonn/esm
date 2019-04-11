@@ -1,0 +1,138 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #2c2d33;
+  min-height: 100vh;
+}
+
+button {
+  border: 0;
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0.62rem;
+  border-radius: 1rem;
+  background: transparent;
+  font-size: 1rem;
+  line-height: 1;
+  outline: none;
+  opacity: 0.9;
+}
+
+.missing {
+  background-color: #222;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.missing a {
+  color: #b6b6b6;
+  margin-top: 3rem;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80vh auto;
+  grid-template-areas:
+    'graph'
+    'tests';
+
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: rgba(44, 45, 51, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
+
+dialog h1 {
+  font-size: 20vmin;
+}
+
+dialog h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 3vmin !important;
+  padding: 0 2rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+dialog p {
+  max-width: 45ex;
+  text-align: center;
+  line-height: 150%;
+  font-size: 3vmin;
+}
+
+dialog * + * {
+  margin-top: 1rem;
+}
+
+dialog button {
+  color: hotpink;
+  border: 1px solid hotpink;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+/* Media queries
+------------------------------------------------------------------------------*/
+
+@media (min-width: 1080px) {
+  .app {
+    grid-template-areas: 'tests graph';
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr;
+  }
+
+  .tests {
+    overflow-y: auto;
+  }
+
+  .tests__header {
+    padding: 0 1rem;
+  }
+
+  .graph {
+    max-width: 38vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .tests {
+    padding: 2rem;
+  }
+}

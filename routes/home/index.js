@@ -69,7 +69,7 @@ const app = () => {
   const [score, setScore] = react.useState(0)
   return html\`
     <button
-      class=\${style}
+      className=\${style}
       onClick=\${e => setScore(score + 1)}
       style=\${{ left: random(), top: random() }}
     >\${score}</button>
@@ -94,21 +94,23 @@ export default () => {
     <main className="app">
       ${!dialog &&
         html`
-          <article className=${style.article}>
-            <${Editor}
-              value=${before}
-              onValueChange=${code => setBefore(code)}
-              highlight=${code => highlight(code, languages.js)}
-              style=${style.editor}
-            />
-          </article>
-          <aside className=${style.browser}>
-            <iframe
-              className=${style.iframe}
-              frameborder="0"
-              src=${`data:text/html;base64,${compile(before)}`}
-            ></iframe>
-          </aside>
+          <${React.Fragment}>
+            <article className=${style.article}>
+              <${Editor}
+                value=${before}
+                onValueChange=${code => setBefore(code)}
+                highlight=${code => highlight(code, languages.js)}
+                style=${style.editor}
+              />
+            </article>
+            <aside className=${style.browser}>
+              <iframe
+                className=${style.iframe}
+                frameBorder="0"
+                src=${`data:text/html;base64,${compile(before)}`}
+              ></iframe>
+            </aside>
+          <//>
         `}
       ${dialog &&
         html`

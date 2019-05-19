@@ -17,6 +17,11 @@ const style = {
     @media (orientation: portrait) {
       padding: 2rem;
     }
+    @media (min-width: 1080px) {
+      position: sticky;
+      top: 0;
+      max-height: 100vh;
+    }
   `,
   iframe: css`
     width: 100%;

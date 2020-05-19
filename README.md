@@ -23,25 +23,17 @@ You write code, you hit save, you see it render.
 
 To use the web interface simply visit https://esm.codes and start typing. After making changes hit save (`cmd+s`). The inputted code will be evaluated and the results of which will appear in the simulated device to the right.
 
-The code you input is are stored in state which is serialised using the browsers `atob` function and set as the `location.hash`. This happens every time a change in the code occurs. That means you can share your creation with anyone by just copy pasting the window URL.
+The code you input is stored in state which is serialised using the browsers `atob` function and set as the `location.hash`. This happens every time a change in the code occurs. That means you can share your creation with anyone by just copy pasting the window URL.
 
 ## Development
 
-If you would like to develop the project, first clone this repo then run the following command in your terminal (from the project root directory) which will open the app in your preferred browser.
+If you would like to develop the project, first clone this repo then run the following command in your terminal (from the project root directory) which will open the app in your preferred browser and code editor.
 
 ```
-$ npx servor
+$ npx servor --editor --browse --reload
 ```
 
-> Live reload is enabled by default with [servor](https://github.com/lukejacksonn/servor) so when you make changes to your code the browser will reload the tab and your changes will be reflected there.
-
-### es-react
-
-This project uses a proprietary version of react called [`es-react`](https://github.com/lukejacksonn/es-react) which allows you to import `React` and `ReactDOM` (version 16.8.3) as an es module from within your app and component files.
-
-```js
-import { React, ReactDOM } from 'https://unpkg.com/es-react'
-```
+> Live reload is enabled by with [servor](https://github.com/lukejacksonn/servor) so when you make changes to your code the browser will reload the tab and your changes will be reflected there.
 
 ## Implementation
 
@@ -56,17 +48,3 @@ The iframe `src` is set to a data url that represents a base64 encoding of the e
   )}`}
 />
 ```
-
-## Todo
-
-I would like the app to remain simple with very focussed scope but I am interested in:
-
-- Adding a URL bar to the simulator device
-- Experimenting with compressing the base64 strings
-
-I am not interested in:
-
-- Rewriting the project in TypeScript
-- Adding Babel or Webpack (or any build step for that matter)
-
-Although I am currently quite busy with work I will try take the time to review PRs that address these todos.

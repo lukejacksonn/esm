@@ -89,21 +89,21 @@ const compile = (src) => btoa(`<script type="module">${src}</script>`)
 
 const app = () => {
   const [code, setcode] = useState(init.code)
-  const [out, setOut] = useState('')
+  // const [out, setOut] = useState('')
 
   useEffect(() => {
     location.hash = `#${btoa(code)}`
   }, [code])
 
-  useEffect(() => {
-    if (code && !out) setOut(code)
-    const alt = (e) => (navigator.platform.match('Mac') ? e.metaKey : e.ctrlKey)
-    const hotKeys = (e) => {
-      if (alt(e) && e.keyCode == 83) e.preventDefault() || setOut(code)
-    }
-    addEventListener('keydown', hotKeys)
-    return () => removeEventListener('keydown', hotKeys)
-  }, [code])
+  // useEffect(() => {
+  //   if (code && !out) setOut(code)
+  //   const alt = (e) => (navigator.platform.match('Mac') ? e.metaKey : e.ctrlKey)
+  //   const hotKeys = (e) => {
+  //     if (alt(e) && e.keyCode == 83) e.preventDefault() || setOut(code)
+  //   }
+  //   addEventListener('keydown', hotKeys)
+  //   return () => removeEventListener('keydown', hotKeys)
+  // }, [code])
 
   return html`
     <main className="app">
@@ -119,7 +119,7 @@ const app = () => {
         <iframe
           className=${style.iframe}
           frameborder="0"
-          src=${`data:text/html;base64,${compile(out)}`}
+          src=${`data:text/html;base64,${compile(code)}`}
         ></iframe>
       </aside>
     </main>

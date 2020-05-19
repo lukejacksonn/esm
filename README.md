@@ -8,7 +8,7 @@ You write code, you hit save, you see it render.
 
 ---
 
-![gistlink](https://user-images.githubusercontent.com/1457604/55997008-24549300-5cb1-11e9-9041-4af005a99828.gif)
+![esm](https://user-images.githubusercontent.com/1457604/55997008-24549300-5cb1-11e9-9041-4af005a99828.gif)
 
 ## Features
 

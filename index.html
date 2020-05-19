@@ -18,20 +18,12 @@
       src="https://www.googletagmanager.com/gtag/js?id=UA-125574008-3"
     ></script>
     <script defer async>
-      window.dataLayer = window.dataLayer || []
+      window.dataLayer = window.dataLayer || [];
       function gtag() {
-        dataLayer.push(arguments)
+        dataLayer.push(arguments);
       }
-      gtag('js', new Date())
-      gtag('config', 'UA-125574008-3')
-    </script>
-    <script>
-      ;(function () {
-        var redirect = sessionStorage.redirect
-        delete sessionStorage.redirect
-        if (redirect && redirect != location.href)
-          history.replaceState(null, null, redirect)
-      })()
+      gtag('js', new Date());
+      gtag('config', 'UA-125574008-3');
     </script>
     <link rel="stylesheet" href="/index.css" />
     <script defer src="/index.js" type="module"></script>

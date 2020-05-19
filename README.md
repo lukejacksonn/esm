@@ -21,7 +21,7 @@ You write code, you hit save, you see it render.
 
 ## Usage
 
-To use the web interface simply visit https://esm.codes and start typing. After making changes hit save (`cmd+s`). The inputted code will be evaluated and the results of which will appear in the simulated device to the right.
+To use the web interface simply visit https://esm.codes and start typing. The inputted code will be evaluated and run in the simulated device.
 
 The code you input is stored in state which is serialised using the browsers `atob` function and set as the `location.hash`. This happens every time a change in the code occurs. That means you can share your creation with anyone by just copy pasting the window URL.
 

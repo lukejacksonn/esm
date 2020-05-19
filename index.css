@@ -31,23 +31,6 @@ button {
   opacity: 0.9;
 }
 
-.missing {
-  background-color: #222;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.missing a {
-  color: #b6b6b6;
-  margin-top: 3rem;
-}
-
 .app {
   display: grid;
   grid-template-columns: 1fr;
@@ -58,54 +41,6 @@ button {
 
   height: 100vh;
   overflow-y: scroll;
-}
-
-dialog {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  background: rgba(44, 45, 51, 1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 0;
-}
-
-dialog h1 {
-  font-size: 20vmin;
-}
-
-dialog h3 {
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-align: center;
-  font-size: 3vmin !important;
-  padding: 0 2rem 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-dialog p {
-  max-width: 45ex;
-  text-align: center;
-  line-height: 150%;
-  font-size: 3vmin;
-}
-
-dialog * + * {
-  margin-top: 1rem;
-}
-
-dialog button {
-  color: hotpink;
-  border: 1px solid hotpink;
-  margin-top: 2rem;
-  font-size: 1.2rem;
-  padding: 1rem;
 }
 
 /* Media queries
@@ -135,4 +70,82 @@ dialog button {
   .tests {
     padding: 2rem;
   }
+}
+
+/* Prism
+------------------------------------------------------------------------------*/
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6272a4;
+}
+
+.token.punctuation {
+  color: #f8f8f2;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #ff79c6;
+}
+
+.token.boolean,
+.token.number {
+  color: #bd93f9;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #50fa7b;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #f1fa8c;
+}
+
+.token.keyword {
+  color: #8be9fd;
+}
+
+.token.regex,
+.token.important {
+  color: #ffb86c;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
 }

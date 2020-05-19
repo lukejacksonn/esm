@@ -2,21 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Gistlink | JS Sandboxes</title>
+    <title>esm</title>
     <link rel="icon" type="image/png" href="/icon.png" />
     <meta
       name="description"
-      content="JavaScript sandbox environments that you can share via URL."
+      content="A prototyping tool for single file es modules"
     />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <script
+      defer
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-125574008-3"
     ></script>
-    <script>
+    <script defer async>
       window.dataLayer = window.dataLayer || []
       function gtag() {
         dataLayer.push(arguments)
@@ -25,7 +26,7 @@
       gtag('config', 'UA-125574008-3')
     </script>
     <script>
-      ;(function() {
+      ;(function () {
         var redirect = sessionStorage.redirect
         delete sessionStorage.redirect
         if (redirect && redirect != location.href)
@@ -33,9 +34,6 @@
       })()
     </script>
     <link rel="stylesheet" href="/index.css" />
-    <link rel="stylesheet" href="/library/prism.css" />
-    <link rel="stylesheet" href="/routes/home/index.css" />
-    <script defer src="/library/prism.js"></script>
     <script defer src="/index.js" type="module"></script>
   </head>
   <body></body>

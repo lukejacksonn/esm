@@ -1,8 +1,10 @@
-# Gistlink
+# esm
 
-> JavaScript sandbox environments that you can share via URL
+> A prototyping tool for single file es modules
 
-The motivation here was to create a single page app like [codesandbox](https://codesandbox.io) – which is commonly used to prototype and demo Javascript code – but with no bundle/transpile overhead and a simplified UI. It is a frontend only static web app with no build step and is hosted on Github pages.
+The motivation here was to create a single page app like [codesandbox](https://codesandbox.io) – which is commonly used to prototype and demo Javascript code – but with no bundle/transpile overhead, a massively simplified UI and no real features (yet). The application itself is a frontend only static web app with no build step and is hosted on Github pages.
+
+You write code, you hit save, you see it render.
 
 ---
 
@@ -11,15 +13,15 @@ The motivation here was to create a single page app like [codesandbox](https://c
 ## Features
 
 - 🎨 Syntax highlighted code editor inputs
-- ♻️ Rebuilds almost instantaneously on key press
+- ♻️ Rebuilds almost instantaneously on save
 - 🌍 Serializable state encoded into shareable URLs
-- 📦 Import npm packages straight from unpkg
-- 💻 Minimal UI putting focus on the code
+- 📦 Import npm packages straight from unpkg or pika CDN
+- 💻 Minimal UI puts focus on the code
 - 🗜 Super light weight – almost no dependencies
 
 ## Usage
 
-To use the web interface simply visit https://gist.link and start typing. As you type the code will be evaluated and the results of which will appear in the simulated device to the right.
+To use the web interface simply visit https://esm.codes and start typing. After making changes hit save (`cmd+s`). The inputted code will be evaluated and the results of which will appear in the simulated device to the right.
 
 The code you input is are stored in state which is serialised using the browsers `atob` function and set as the `location.hash`. This happens every time a change in the code occurs. That means you can share your creation with anyone by just copy pasting the window URL.
 

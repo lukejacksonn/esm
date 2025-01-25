@@ -21,7 +21,7 @@ You write code, you hit save, you see it render.
 
 ## Usage
 
-To use the web interface simply visit https://lukejacksonn.github.io/esm and start typing. The inputted code will be evaluated and run in the simulated device.
+To use the web interface simply visit https://esm.lukejacksonn.com and start typing. The inputted code will be evaluated and run in the simulated device.
 
 The code you input is stored in state which is serialised using the browsers `atob` function and set as the `location.hash`. This happens every time a change in the code occurs. That means you can share your creation with anyone by just copy pasting the window URL.
 
